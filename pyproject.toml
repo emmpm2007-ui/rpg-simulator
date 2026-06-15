@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rpg-simulator"
+version = "1.0.0"
+description = "RPG de exploración y combate por turnos con Tkinter"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Emanuelle Perez Martinez", email = "emmpm2007@gmail.com"}]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.10"
+# Sin dependencias externas, todo en la biblioteca estándar
+dependencies = []
+
+[project.scripts]
+rpg-simulator = "rpg_simulator:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]

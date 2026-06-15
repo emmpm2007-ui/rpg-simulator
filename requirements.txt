@@ -1,0 +1,5 @@
+# No se requieren dependencias externas; solo se necesita Python 3.10+ con tkinter.
+# Para desarrollo:
+pytest>=7.0
+flake8>=5.0
+black>=23.0
